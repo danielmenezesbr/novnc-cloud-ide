@@ -1,0 +1,16 @@
+{
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "moby": true,
+        "azureDnsAutoDetection": true,
+        "installDockerBuildx": true,
+        "version": "latest",
+        "dockerDashComposeVersion": "v2"
+      }
+    },
+    "hostRequirements": {
+      "cpus": 4
+    },
+    "postAttachCommand": "./start.sh",
+    "forwardPorts": [ 6901 ]
+  }

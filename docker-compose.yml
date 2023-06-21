@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  vnc:
+    image: accetto/ubuntu-vnc-xfce-firefox-g3
+    restart: unless-stopped
+    ports:
+      - 6901:6901
+    volumes:
+      - "./Downloads:/home/headless/Downloads"
+    shm_size: "2gb"
+    cap_add:
+      - SYS_ADMIN
