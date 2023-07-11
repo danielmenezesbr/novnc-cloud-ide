@@ -5,8 +5,8 @@ if [[ ! -z "${GITPOD_WORKSPACE_URL}" ]]; then
   EXTERNAL_URL=${EXTERNAL_URL/https:\/\//https:\/\/6901-}/vnc.html?password=headless
 fi
 if [[ ! -z "${GOOGLE_CLOUD_SHELL}" ]]; then
-  #EXTERNAL_URL="https://shell.cloud.google.com/devshell/proxy?authuser=0&port=6901&environment_id=default"
-  EXTERNAL_URL="https://6901-${WEB_HOST}/vnc.html?password=headless"
+  EXTERNAL_URL="https://shell.cloud.google.com/devshell/proxy?authuser=0&port=6901&environment_id=default"
+  #EXTERNAL_URL="https://6901-${WEB_HOST}/vnc.html?password=headless"
 fi
 if [[ ! -z "${CODESPACES}" ]]; then
   EXTERNAL_URL="https://${CODESPACE_NAME}-6901.preview.app.github.dev/vnc.html?password=headless"
