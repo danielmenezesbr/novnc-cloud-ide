@@ -14,3 +14,12 @@ services:
     shm_size: "2gb"
     cap_add:
       - SYS_ADMIN
+    command: 
+      - "bash"
+      - "-c"
+      - |
+        echo 'headless' | sudo -S sed -i 's/vnc.html/vnc.html?password=headless/g' /usr/libexec/noVNCdim/index.html \
+        && echo 'headless' | sudo -S wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add - \
+        && echo 'headless' | sudo -S bash -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list' \
+        && sudo apt update \
+        && sudo apt install anydesk -y
