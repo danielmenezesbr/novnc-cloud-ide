@@ -1,10 +1,14 @@
 {
-    "name": "Docker in Docker",
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "name": "Cloud IDE Starter",
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "installOhMyZsh": true
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/node:1": {}
     },
-    "runArgs": [ "--privileged" ],
     "hostRequirements": {
       "cpus": 4
     },
