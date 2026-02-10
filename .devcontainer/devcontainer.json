@@ -1,13 +1,10 @@
 {
+    "name": "Docker in Docker",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-      "ghcr.io/devcontainers/features/docker-in-docker:2": {
-        "moby": true,
-        "azureDnsAutoDetection": true,
-        "installDockerBuildx": true,
-        "version": "latest",
-        "dockerDashComposeVersion": "v2"
-      }
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
+    "runArgs": [ "--privileged" ],
     "hostRequirements": {
       "cpus": 4
     },
